@@ -93,8 +93,9 @@ Partial Class Install
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(144, 58)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(228, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
         Me.ProgressBar1.TabIndex = 6
+        Me.ProgressBar1.Visible = False
         '
         'Install
         '

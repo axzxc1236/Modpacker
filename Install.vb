@@ -27,9 +27,7 @@ Public Class Install
         For i = 0 To ListBox1.Items.Count - 1
             TextBox1.Text = TextBox1.Text & vbCrLf & "Started to Download Mod " & Modname(i)
             filename = Split(ModDownloadLink(i), "/")
-            'My.Computer.Network.DownloadFile(ModDownloadLink(i), My.Computer.FileSystem.CurrentDirectory & "\Modpacker\tmp\" & filename(filename.Length - 1))
-            'DownloadFile(ModDownloadLink(i), filename(filename.Length - 1))
-            download.DownloadDataAsync(New Uri(ModDownloadLink(i)), My.Computer.FileSystem.CurrentDirectory & "\Modpacker\tmp\" & filename(filename.Length - 1))
+            My.Computer.Network.DownloadFile(ModDownloadLink(i), My.Computer.FileSystem.CurrentDirectory & "\Modpacker\tmp\" & filename(filename.Length - 1))
             TextBox1.Text = TextBox1.Text & vbCrLf & "O Mod " & Modname(i) & " Downloaded successful."
         Next
     End Sub
@@ -38,13 +36,4 @@ Public Class Install
         TextBox1.Text = TextBox1.Text & vbCrLf & "Mod downloader is started."
         BackgroundWorker1.RunWorkerAsync()
     End Sub
-
-    'Sub DownloadFile(ByVal a As String, ByVal b As String)
-    '    'AddHandler download.DownloadProgressChanged, AddressOf download_DownloadProgressChanged
-    '    download.DownloadDataAsync(New Uri(a), My.Computer.FileSystem.CurrentDirectory & "\Modpacker\tmp\" & b)
-    'End Sub
-    'Private Sub download_DownloadProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs) Handles download.DownloadProgressChanged
-    '    'If e.ProgressPercentage = 10 Then MsgBox("1")
-    '    ProgressBar1.Value = e.ProgressPercentage
-    'End Sub
 End Class
