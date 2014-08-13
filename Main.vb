@@ -27,7 +27,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MsgBox("Modpacker still in development!")
+        MsgBox("Modpacker still in development!" & vbCrLf & "It is licensed under GNU GPL V3!")
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
